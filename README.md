@@ -33,14 +33,15 @@ Day 1: Variables & Functions
 Variables
 Declared with let
 
-Immutable by default (use mut to make mutable)
+_Immutable by default (use mut to make mutable)_
 
-Must be initialized before use
+**Must be initialized before use**
 
 rust
 let x = 5;          // Immutable
 let mut y = 10;     // Mutable
 y = 15;             //  Works
+
 Shadowing
 Reusing a variable name creates a new variable that hides the old one.
 
@@ -50,28 +51,29 @@ let x = 5;          // x is now an integer
 Constants
 Declared with const
 
-Always need a type annotation
+_Always need a type annotation_
 
-Naming convention: UPPERCASE_WITH_UNDERSCORES
+**Naming convention: UPPERCASE_WITH_UNDERSCORES**
 
 rust
 const MAX_USERS: u32 = 100;
 Functions
 Defined with fn
 
-Parameters require type annotations
+**Parameters require type annotations**
 
-Return type specified with ->
+**Return type specified with ->**
 
 rust
 fn add(x: i32, y: i32) -> i32 {
     x + y           // Implicit return (no semicolon)
 }
-Statements vs. Expressions
+**Statements vs. Expressions**
 Type	Has Semicolon?	Returns?
 Statement	 ;	Nothing (())
-Expression	 No semicolon	A value
-Common Rust Types
+Expression No semicolon	A value
+
+**Common Rust Types**
 Type	Description
 i32	Signed 32-bit integer (default)
 u8	Unsigned 8-bit integer (0-255)
@@ -80,8 +82,9 @@ bool	true or false
 char	Single Unicode character
 String	Owned, growable text
 &str	Immutable, borrowed text
-Day 2: If Statements
-Key Concepts
+
+**Day 2: If Statements**
+_Key Concepts_
 if is an expression (it returns a value)
 
 Conditions must be bool (no implicit truthiness)
@@ -109,8 +112,9 @@ if x > 10 {
 } else {
     println!("x is small");
 }
-Day 3: Quiz 1
-What I Learned
+
+**Day 3: Quiz 1**
+_What I Learned_
 Module imports: use super::* imports items from the parent module into the child module
 
 Parent/Child relationship: The test module (mod tests) can access functions defined in the parent scope
