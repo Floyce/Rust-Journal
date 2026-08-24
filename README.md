@@ -1,21 +1,21 @@
-# 🦀 Rust Learning Journal
+#  Rust Learning Journal
 
-Welcome to my Rust learning journey! I'm documenting everything I learn as I work through the [Rustlings](https://github.com/rust-lang/rustlings) exercises. This repository serves as both my personal reference and a way to track my progress.
+Hey. I've decided to learn Rust from scratch this time. So I'll be documenting everything I learn as I work through the [Rustlings](https://github.com/rust-lang/rustlings) exercises. This repository serves as both my personal reference and a way to track my progress. I'm super excited to see where I'll be a year from now. Come with me. Lol;)
 
 ---
 
-## 📆 Progress Overview
+##  Progress Overview
 
 | Day | Topics Covered | Status |
 |-----|----------------|--------|
-| **Day 1** | Setup, Variables, Functions | ✅ Complete |
-| **Day 2** | If Statements, Conditionals, Negation | ✅ Complete |
-| **Day 3** | Quiz 1 (Variables, Functions, If) | ✅ Complete |
-| **Day 4** | Move Semantics (Ownership) | 🟡 In Progress |
+| **Day 1** | Setup, Variables, Functions |  Complete |
+| **Day 2** | If Statements, Conditionals, Negation |  Complete |
+| **Day 3** | Quiz 1 (Variables, Functions, If) |  Complete |
+| **Day 4** | Move Semantics (Ownership) |  In Progress |
 
 ---
 
-## 🛠️ Setup Commands
+##  Setup Commands
 
 ```bash
 # Install Rust
@@ -40,7 +40,7 @@ Must be initialized before use
 rust
 let x = 5;          // Immutable
 let mut y = 10;     // Mutable
-y = 15;             // ✅ Works
+y = 15;             //  Works
 Shadowing
 Reusing a variable name creates a new variable that hides the old one.
 
@@ -69,8 +69,8 @@ fn add(x: i32, y: i32) -> i32 {
 }
 Statements vs. Expressions
 Type	Has Semicolon?	Returns?
-Statement	✅ ;	Nothing (())
-Expression	❌ No semicolon	A value
+Statement	 ;	Nothing (())
+Expression	 No semicolon	A value
 Common Rust Types
 Type	Description
 i32	Signed 32-bit integer (default)
@@ -142,10 +142,10 @@ mod tests {
 }
 Key Takeaway: The function in the parent module must have the exact same name that the tests are expecting.
 
-🚀 Next Up: Move Semantics (Ownership)
-Coming soon: The heart of Rust's memory management system.
+ Next Up: Move Semantics (Ownership)
+Coming soon: The heart of Rust's memory management system. Excitedd
 
-📚 Resources
+ Resources
 The Rust Book
 
 Rustlings GitHub
