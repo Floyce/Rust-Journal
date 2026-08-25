@@ -1,6 +1,6 @@
 #  Rust Learning Journal
 
-Hey. I've decided to learn Rust from scratch this time. So I'll be documenting everything I learn as I work through the [Rustlings](https://github.com/rust-lang/rustlings) exercises. This repository serves as both my personal reference and a way to track my progress. I'm super excited to see where I'll be a year from now. Come with me. Lol;)
+Hey. I've decided to learn Rust from scratch this time. So I'll be documenting everything I learn as I work through the [Rustlings](https://github.com/rust-lang/rustlings) exercises. This repository serves as both my personal reference and a way to track my progress. I'm super excited to see where I'll be a year from now. Come with me. Lol ;)
 
 ---
 
@@ -11,7 +11,8 @@ Hey. I've decided to learn Rust from scratch this time. So I'll be documenting e
 | **Day 1** | Setup, Variables, Functions |  Complete |
 | **Day 2** | If Statements, Conditionals, Negation |  Complete |
 | **Day 3** | Quiz 1 (Variables, Functions, If) |  Complete |
-| **Day 4** | Move Semantics (Ownership) |  In Progress |
+| **Day 4** | Primitive Types, `cfg`, Characters |  Complete |
+| **Day 5** | Move Semantics (Ownership) |  In Progress |
 
 ---
 
@@ -33,15 +34,14 @@ Day 1: Variables & Functions
 Variables
 Declared with let
 
-_Immutable by default (use mut to make mutable)_
+Immutable by default (use mut to make mutable)
 
-**Must be initialized before use**
+Must be initialized before use
 
 rust
 let x = 5;          // Immutable
 let mut y = 10;     // Mutable
-y = 15;             //  Works
-
+y = 15;             // ✅ Works
 Shadowing
 Reusing a variable name creates a new variable that hides the old one.
 
@@ -51,29 +51,28 @@ let x = 5;          // x is now an integer
 Constants
 Declared with const
 
-_Always need a type annotation_
+Always need a type annotation
 
-**Naming convention: UPPERCASE_WITH_UNDERSCORES**
+Naming convention: UPPERCASE_WITH_UNDERSCORES
 
 rust
 const MAX_USERS: u32 = 100;
 Functions
 Defined with fn
 
-**Parameters require type annotations**
+Parameters require type annotations
 
-**Return type specified with ->**
+Return type specified with ->
 
 rust
 fn add(x: i32, y: i32) -> i32 {
     x + y           // Implicit return (no semicolon)
 }
-**Statements vs. Expressions**
+Statements vs. Expressions
 Type	Has Semicolon?	Returns?
-Statement	 ;	Nothing (())
-Expression No semicolon	A value
-
-**Common Rust Types**
+Statement	;	Nothing (())
+Expression	 No semicolon	A value
+Common Rust Types
 Type	Description
 i32	Signed 32-bit integer (default)
 u8	Unsigned 8-bit integer (0-255)
@@ -82,9 +81,8 @@ bool	true or false
 char	Single Unicode character
 String	Owned, growable text
 &str	Immutable, borrowed text
-
-**Day 2: If Statements**
-_Key Concepts_
+Day 2: If Statements
+Key Concepts
 if is an expression (it returns a value)
 
 Conditions must be bool (no implicit truthiness)
@@ -112,9 +110,8 @@ if x > 10 {
 } else {
     println!("x is small");
 }
-
-**Day 3: Quiz 1**
-_What I Learned_
+Day 3: Quiz 1
+What I Learned
 Module imports: use super::* imports items from the parent module into the child module
 
 Parent/Child relationship: The test module (mod tests) can access functions defined in the parent scope
@@ -146,10 +143,44 @@ mod tests {
 }
 Key Takeaway: The function in the parent module must have the exact same name that the tests are expecting.
 
- Next Up: Move Semantics (Ownership)
-Coming soon: The heart of Rust's memory management system. Excitedd
+Day 4: Primitive Types & cfg
+What I Learned
+cfg: Conditional compilation (#[cfg(test)], use super::*)
 
- Resources
+Primitive types: Integers, floats, booleans, characters
+
+Characters (char): Single quotes, Unicode support, .is_alphabetic() and .is_numeric() methods
+
+Variables vs Functions vs Arguments: Clear distinction
+
+Key Concepts
+Concept	What it is	Example
+Variable	Container for data	let x = 5;
+Function	Reusable block of code	fn add(a, b) { a + b }
+Argument	Value passed to a function	add(5, 3)
+Code Examples
+rust
+// Character example
+let my_initial = 'C';
+if my_initial.is_alphabetic() {
+    println!("It's a letter!");
+}
+
+// cfg test example
+#[cfg(test)]
+mod tests {
+    use super::*;
+    // ... tests here
+}
+
+// Quiz 1 - Apple price function
+fn calculate_price_of_apples(apples: i32) -> i32 {
+    if apples <= 40 { apples * 2 } else { apples }
+}
+ Next Up: Move Semantics (Ownership)
+The heart of Rust's memory management system. Excited!
+
+Resources
 The Rust Book
 
 Rustlings GitHub
