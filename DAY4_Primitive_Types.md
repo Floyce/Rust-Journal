@@ -59,8 +59,41 @@ mod tests {
         assert_eq!(calculate_price_of_apples(65), 65);
     }
 }
-📊 Progress
-Rustlings: 18/94 exercises complete
+### 7. Arrays (`[T; N]`)
+
+- **Compound type** (groups values)
+- **Same type** for all elements
+- **Fixed size** (cannot grow or shrink)
+
+```rust
+// Create an array with 100 elements, all set to 0
+let a = [0i32; 100];
+
+// Check the length
+if a.len() >= 100 {
+    println!("Wow, that's a big array!");
+}
+Array syntax breakdown:
+
+[0i32; 100] = [initial_value; length]
+
+0i32 = value (all elements start as 0)
+
+100 = number of elements
+
+Other array examples:
+
+rust
+let numbers = [1, 2, 3, 4, 5];      // Specific values
+let zeros = [0; 50];                 // 50 zeros
+let bools = [true; 10];              // 10 true values
+8. Compound Types Summary
+Type	Different Types?	Fixed Size?	Example
+Tuple	✅ Yes	✅ Yes	(i32, f64, char)
+Array	❌ No (same type)	✅ Yes	[i32; 100]
+
+Progress
+Rustlings: 20/94 exercises complete
 
 Completed: Variables, Functions, If, Quiz 1
 
