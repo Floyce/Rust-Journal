@@ -1,6 +1,7 @@
 # Day 4: Primitive Types & `cfg`
 
-- Hey, this is my Day4 of my Rust Journal.And i'm super excited because it's on primitive types which are considered the most basic types thet Rust provides out of the box. Unlike in othere languageds, Primitive Types are embedded/build into the language(Rust) itself.😊If you ask me, that's super cool and efficient.
+- Hey, this is my Day4 of my Rust Journal.And i'm super excited because it's on primitive types which are considered the most basic types that Rust provides out of the box. Unlike in othere languageds, Primitive Types are embedded/build into the language(Rust) itself.
+- If you ask me, that's super cool and efficient.
 
 ## What I Learned Today
 
